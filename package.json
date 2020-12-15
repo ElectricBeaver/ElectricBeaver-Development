@@ -1,45 +1,30 @@
 {
-  "name": "ElectricBeaver2.0",
-  "version": "2.0.0",
-  "description": "A discord bot",
-  "main": "index.js",
-  "dependencies": {
-    "ascii": "^1.0.0",
-    "ascii-art": "^1.5.1",
-    "bad-words": "^3.0.3",
-    "canvas": "^2.6.0",
-    "cheerio": "^1.0.0-rc.3",
-    "colors": "^1.4.0",
-    "discord-glitter": "^1.0.1",
-    "discord.js": "^11.5.1",
-    "events": "^3.0.0",
-    "ffmpeg-binaries": "^4.0.0",
-    "fs": "^0.0.1-security",
-    "log4js": "^4.5.1",
-    "mathjs": "^6.2.5",
-    "moment": "^2.24.0",
-    "mysql": "^2.17.1",
-    "opusscript": "^0.0.6",
-    "youtube-dl": "^2.1.0",
-    "ytdl": "^0.12.0",
-    "ytdl-core": "^0.29.7",
-    "ytdl-getinfo": "^1.1.0"
-  },
-  "devDependencies": {},
+  "name": "electric-beaver3.0",
+  "version": "0.0.1",
+  "description": "ElectricBeaver3.0",
+  "main": "app.js",
+  "author": "ElectricBeaver",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ https://github.com/cr4zyr003ter/Public-ElectricBeaver2.0"
+    "url": "git+https://github.com/Electric-Bot-Development/ElectricBeaver3.0.git"
   },
-  "keywords": [
-    "ElectricBeaver2.0"
-  ],
-  "author": "Brenden C. Mitchell",
-  "license": "GNUv3",
+  "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/cr4zyr003ter/Public-ElectricBeaver2.0/issues"
+    "url": "https://github.com/Electric-Bot-Development/ElectricBeaver3.0/issues"
   },
-  "homepage": "https://discord.gg/pepQ3uP"
+  "homepage": "https://github.com/Electric-Bot-Development/ElectricBeaver3.0#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "console-log-html": "^2.0.2",
+    "discord.js": "^12.2.0",
+    "log4js": "^6.3.0",
+    "mkdirp": "^1.0.4",
+    "moment": "^2.29.0",
+    "mysql": "^2.18.1",
+    "ytdl-core": "^3.2.2",
+    "ytdl-getinfo": "^1.1.0"
+  }
 }

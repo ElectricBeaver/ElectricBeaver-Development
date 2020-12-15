@@ -1,9 +1,3 @@
-
-test.js
-settings/configuration.json
-config.json
-sqlmes.js
-commands\restart.js
-SqlTest.js
-logs\log.yaml
-logs\trumpetlogs.yaml
+logs/
+Settings/
+node_modules/
