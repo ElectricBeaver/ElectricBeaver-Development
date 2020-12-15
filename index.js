@@ -12,6 +12,7 @@ client.aliases =  new Discord.Collection();
 client.commands = new Discord.Collection();
 require('./sqldata.js')
 require('./logger.js')
+require('./imageModule');
 fs.readdir("./Commands/", (err, files) => {
     if (err) console.log(err)
     let jsfile = files.filter(f => f.split(".").pop() === "js")
@@ -45,16 +46,24 @@ con.connect(function(err){
 
 client.on('message', async msg => {
     if (msg.author.bot) return;
+    if(msg.channel.type === "dm") return;
+//#region imagebot
+
+
+//#endregion
+
+
+
 
     let messageArray = msg.content.split(" ")
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
     con.query(`SELECT * FROM bot.bot_servers WHERE servers_id = '${msg.guild.id}'`, function (err, result){
         var prefix = result[0].servers_prefix;
-        
         if (!msg.content.startsWith(config.setup.prefix)) return
 
-        let commandFile = client.commands.get(cmd.slice(prefix)) || client.commands.get(client.aliases.get(cmd.slice(prefix)))
+        let commandFile = client.commands.get(cmd.slice(prefix.length)) || client.commands.get(client.aliases.get(cmd.slice(prefix.length)))
+        console.log(commandFile);
         if(commandFile) commandFile.run(client, msg, args, con, Discord)
     })
 
