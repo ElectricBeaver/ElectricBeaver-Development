@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <title>Project 1</title>
+
+    </head>
+    
+    <body>
+        <div class="tab">
+            <button class="tablinks" onclick="openPage(event, 'Rutherford')">Rutherford</button>
+            <button class="tablinks" onclick="openPage(event, 'James')">James</button>
+            <button class="tablinks" onclick="openPage(event, 'Chester')">Chester</button>
+            <button class="tablinks" onclick="openPage(event, 'Grover First term')">Grover First term</button>
+            <button class="tablinks" onclick="openPage(event, 'Benjamin')">Benjamin</button>
+            <button class="tablinks" onclick="openPage(event, 'Grover second term')">Grover second term</button>
+        </div>
+
+        <div id="Rutherford" class="tabContent">
+            <article>
+                <h2>Rutherford B. Hayes</h2>
+                <p id="p01">This is information</p>
+            </article>
+        </div>
+
+        <div id="James" class="tabContent">
+            <article>
+                <h2>James Garfield</h2>
+                <p id="p01">This is Information</p>
+             </article>              
+        </div>
+       
+        
+    
+        <div id="Chester" class="tabContent">
+            <article>
+                <h2>Chester Arthur</h2>
+                <p id="p01">This is Information</p>
+            </article>
+        </div>
+
+        <div id="Grover First term" class="tabContent">
+            <article>
+                <h2>Grover Cleveland (first term)</h2>
+                <p id="p01">This is Information</p>
+            </article>
+        </div>
+ 
+        <div id="Benjamin" class="tabContent">
+            <article>
+                <h2>Benjamin Harrison</h2>
+                <p id="p01">This is Information</p>
+            </article>
+        </div>
+ 
+        <div id="Grover second term" class="tabContent">
+            <article>
+                <h2>Grover Cleveland(second term)</h2>
+                <p id="p01">This is information</p>
+            </article>
+        </div>
+    <script>
+        function openPage(evt, pName){
+    var i, tabContent, tabLinks
+    tabContent = document.getElementsByClassName("tabContent");
+    for(i = 0; i < tabContent.length; i++){
+        tabContent[i].style.display = "none";
+    }
+
+    tabLinks = document.getElementsByClassName("tablinks");
+    for(i = 0; i < tabLinks.length; i ++){
+        tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(pName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+    </script>
+    </body>
+</html>
