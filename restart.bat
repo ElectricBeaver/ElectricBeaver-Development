@@ -1,0 +1,6 @@
+@echo off
+echo Starting...
+:main
+node .
+echo Shit either something went wrong or im being restated...
+goto main
